@@ -28,7 +28,7 @@ w1_1-w1_10: weight values for the first layer in the neural network (in 32 bit h
 w2_1-w2_10: weight values for the second layer in the neural network (in 32 bit hexadecimal format)  
 data_in:  
 
-# __File Descriptions (.py):__  
+# __File Descriptions (.ipynb):__  
 
 # __Hierarchy of Files:__  
 
