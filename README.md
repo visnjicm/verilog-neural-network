@@ -1,4 +1,4 @@
-# Verilog Neural Network
+# Verilog implementation of a pre-trained 28x28 pixel handwritten single digit recognition neural network   
 Hardware implementation of a pre-trained neural network circuit with 3 layers that is able to recognize handwritten single digits based on 28x28 input pixel map.
 
 
