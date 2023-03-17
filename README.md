@@ -2,7 +2,7 @@
 Hardware implementation of a pre-trained neural network circuit with 3 layers that is able to recognize handwritten single digits based on 28x28 input pixel map.
 
 
-File Descriptions (.sv):  
+# __File Descriptions (.sv):__  
 
 tb_neuralnetwork.sv: testbench for neural_network.sv  
 
@@ -22,8 +22,15 @@ ReLu.sv: adds the bias term when to the output of adder.sv when the counter reac
 
 counter.sv: counter that starts at 0 and increments by 1 up on every positive clock edge, until the output reaches the value of the parameter #COUNTER_END  
 
-File Descriptions (.mem):  
+# __File Descriptions (.mem):__  
 
 w1_1-w1_10: weight values for the first layer in the neural network (in 32 bit hexadecimal format)  
 w2_1-w2_10: weight values for the second layer in the neural network (in 32 bit hexadecimal format)  
 data_in: 
+
+# __Hierarchy of Files:__  
+
+
+# __Block diagram:__  
+
+
