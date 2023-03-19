@@ -95,7 +95,9 @@ And you need to add one more .mem file which is not in the repo, but is the data
 
 ![image](https://user-images.githubusercontent.com/126916558/226155244-bee87bdf-fec7-458c-9af4-4af6cbe4dacb.png)  
 
-__Step 6:__
+__Step 6:__  
+
+You need to "pad" the data_in.mem file with 20 rows of 00000000 before the beginning of the first line (before padding) and after the last line of the file (also before padding). If you don't do this, the simulation will not output the correct behaviour result.
 
 
 
