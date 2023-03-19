@@ -105,6 +105,16 @@ Set simulation time to 9000 ns.
 
 ![image](https://user-images.githubusercontent.com/126916558/226156390-75ed374c-9bd6-4271-a664-5a40d72d7718.png)
 
+__Step 8:__
+
+Run the simulation, and copy the last part of the data from the output, circled in red in the image below (the last 10 lines, and this column):
+
+![image](https://user-images.githubusercontent.com/126916558/226157431-f1052bf8-386a-41d2-96a9-04a9248459fe.png)  
+
+These are the ouput values of the neural networked in fixed point representation, so we need to convert them back to floating point, and then convert those to softmax, to get our final prediction/result. Both of these things can be done File1.ipynb. For the parameters of the to_float function, the first parameter is the number, and the second parameter set to 45. Then when you converted all 10 of the fixed values to float, you can put them in the softmax array in the code, run the module, and see what the predicted output is, like such:
+
+
+
 # __Acknowledgments:__  
 
 A huge thanks to Samson Zhang (YouTube: @SamsonZhangTheSalmon) for providing his NN training code free of charge, this project would not of been possible without him!  
