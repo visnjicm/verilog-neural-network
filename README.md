@@ -105,8 +105,11 @@ Set simulation time to 9000 ns.
 
 ![image](https://user-images.githubusercontent.com/126916558/226156390-75ed374c-9bd6-4271-a664-5a40d72d7718.png)
 
+# __Acknowledgments:__  
 
+A huge thanks to Samson Zhang (YouTube: @SamsonZhangTheSalmon) for providing his NN training code free of charge, this project would not of been possible without him!  
 
+(Link to Samson's code: https://www.kaggle.com/code/wwsalmon/simple-mnist-nn-from-scratch-numpy-no-tf-keras/notebook)  
 
 
 
