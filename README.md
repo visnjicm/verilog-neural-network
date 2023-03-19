@@ -10,7 +10,7 @@ neural_network.sv: "main" top-level module
 
 layer.sv: module that implements the behaviour of a layer in the NN  
 
-neuron.sv: module that implements the behaviour of a neuron in the NN  
+neuron)inputlayer.sv: module that implements the behaviour of a neuron in the NN  
 
 register.sv: module for neuron (gets the data at the index specified by the counter)  
 
@@ -40,7 +40,7 @@ Design Sources:
 
 neural_network.sv X 1  
 - layer.sv X 2  
-  - neuron.sv x 10  
+  - neuron_inputlayer.sv x 10  
     - register.sv X 2   
     - multiplier.sv X 1  
     - adder.sv X 1  
@@ -71,7 +71,7 @@ __Step 4:__ Use the code in File1.ipynb to convert the (Your Number)_prenormaliz
 __Step 5:__ Create a new vivado project, add these files as design sources:
 
 layer.sv  
-neuron.sv  
+neuron_inputlayer.sv  
 register.sv  
 multiplier.sv  
 adder.sv  
