@@ -111,9 +111,21 @@ Run the simulation, and copy the last part of the data from the output, circled 
 
 ![image](https://user-images.githubusercontent.com/126916558/226157431-f1052bf8-386a-41d2-96a9-04a9248459fe.png)  
 
-These are the ouput values of the neural networked in fixed point representation, so we need to convert them back to floating point, and then convert those to softmax, to get our final prediction/result. Both of these things can be done File1.ipynb. For the parameters of the to_float function, the first parameter is the number, and the second parameter set to 45. Then when you converted all 10 of the fixed values to float, you can put them in the softmax array in the code, run the module, and see what the predicted output is, like such:
+These are the ouput values of the neural networked in fixed point representation, so we need to convert them back to floating point, and then convert those to softmax, to get our final prediction/result. Both of these things can be done File1.ipynb. For the parameters of the to_float function, the first parameter is the number, and the second parameter set to 45. Then when you converted all 10 of the fixed values to float, you can put them in the softmax array in the code, run the module, and see what the predicted output is, like such:  
 
+![image](https://user-images.githubusercontent.com/126916558/226158471-75f12e1d-975e-4ad6-8927-d4dfa899ac3b.png)  
 
+As you can see, unfortunately the neural network did not predict that the digit was 4. This is mainly due to two reasons, first reason, this network was not trained to recognize the way I write but instead was trained using the standard MNIST database for neural network training, and second, this network is also relatively simple and has been tested to have a 84% accuracy, which albeit high, still makes mistakes. However, the reason it failed here is mostly due to the first reason, to prove this I will use the data from the following image, which is one of the MNIST images which the NN was trained to recognize:  
+
+![image](https://user-images.githubusercontent.com/126916558/226158898-6ca20407-b440-4652-8378-d68ec65d912f.png)
+
+We get these results from the simulation:
+
+![image](https://user-images.githubusercontent.com/126916558/226158893-a69ff585-81f2-4028-89a4-f26a0fc5b131.png)
+
+Which when we then convert to float, and apply softmax, we get the predicted result that we expect, 8.
+
+![image](https://user-images.githubusercontent.com/126916558/226159160-9dc7f431-afc9-47d8-8772-61c498697866.png)
 
 # __Acknowledgments:__  
 
@@ -121,6 +133,6 @@ A huge thanks to Samson Zhang (YouTube: @SamsonZhangTheSalmon) for providing his
 
 (Link to Samson's code: https://www.kaggle.com/code/wwsalmon/simple-mnist-nn-from-scratch-numpy-no-tf-keras/notebook)  
 
+# __Future Work:__  
 
-
-
+It would be much more beneficial to investigate ways of training a neural network on FPGA, meaning, designing sophisticated enough Verilog code that can be synthesized on an FPGA to both train and simulate neural networks. Much more work should be done on investigating ways of efficiently converting sophisticated neural network algorithms/structures, to synthesizable digital circuit design using Verilog. As we saw, this neural network, although it was able to pretty accurately predict from the result from the images in the training set it was given, it failed pretty miserabely when it came to predicting my own handwritting, despite being a completely valid input. Ways to resolve this issue as effictively and efficiently as possible should really be investigated in future work, and this might involve using more sophisticated neural network algorithms, structures, and/or ideas.
