@@ -54,4 +54,16 @@ See BlockDiagram.png.
 
 # __How to use this:__  
 
+Step 1: Resize the canvas in paint to 28x28 pixels and draw any digit in between 0-9. Then invert the color, and then save as a png file.  
+
+![step1](https://user-images.githubusercontent.com/126916558/226153939-a270a304-ffdd-441f-9ab8-3864d5d8588b.PNG)  
+
+![4_marko](https://user-images.githubusercontent.com/126916558/226153957-6ccf1e24-eeb7-4f53-a865-bc0ab9c67455.png)  
+
+Step 2: Convert the image to a .csv file of pixel values in a 1D array, by using the Convert Image to... .ipynb file in the repo.
+
+![image](https://user-images.githubusercontent.com/126916558/226154252-f089e756-2f3c-4040-ad4d-10e4ba2af39d.png)
+
+
+
 
