@@ -99,6 +99,13 @@ __Step 6:__
 
 You need to "pad" the data_in.mem file with 20 rows of 00000000 before the beginning of the first line (before padding) and after the last line of the file (also before padding). If you don't do this, the simulation will not output the correct behaviour result.
 
+__Step 7:__  
+
+Set simulation time to 9000 ns.
+
+![image](https://user-images.githubusercontent.com/126916558/226156390-75ed374c-9bd6-4271-a664-5a40d72d7718.png)
+
+
 
 
 
