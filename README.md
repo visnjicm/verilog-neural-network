@@ -24,11 +24,11 @@ counter.sv: counter that starts at 0 and increments by 1 up on every positive cl
 
 # __File Descriptions (.mem):__  
 
-w1_1-w1_10: weight values for the first layer in the neural network (in 32 bit hexadecimal format)
+w1_1-w1_10: weight values for the first layer in the neural network (in 32 bit hexadecimal format)  
 w2_1-w2_10: weight values for the second layer in the neural network (in 32 bit hexadecimal format)  
 data_in: data values (in 32 bit hexadecimal format)  
-b1: bias values for the neurons in the first layer (in 32 bit hexadecimal format) 
-b2: bias values for the neurons in the second layer (in 32 bit hexadecimal format) 
+b1: bias values for the neurons in the first layer (in 32 bit hexadecimal format)  
+b2: bias values for the neurons in the second layer (in 32 bit hexadecimal format)  
 
 # __Hierarchy of Files:__  
 
