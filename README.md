@@ -64,6 +64,11 @@ Step 2: Convert the image to a .csv file of pixel values in a 1D array, by using
 
 ![image](https://user-images.githubusercontent.com/126916558/226154252-f089e756-2f3c-4040-ad4d-10e4ba2af39d.png)
 
+Step 3: Use the code in File2.ipynb to convert the (Your Number)_prenormalized.csv to (Your Number).csv.
+
+Step 4: Use the code in File1.ipynb to convert the (Your Number)_prenormalized.csv to (Your Number)_fixed.csv and (Your Number)_hex.csv.
+
+
 
 
 
