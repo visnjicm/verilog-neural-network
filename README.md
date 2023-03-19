@@ -8,9 +8,9 @@ tb_neuralnetwork.sv: testbench for neural_network.sv
 
 neural_network.sv: "main" top-level module  
 
-layer.sv: module that implements the behaviour of a layer in the NN  
+input_layer.sv: module that implements the behaviour of a layer in the NN  
 
-neuron)inputlayer.sv: module that implements the behaviour of a neuron in the NN  
+neuron_inputlayer.sv: module that implements the behaviour of a neuron in the NN  
 
 register.sv: module for neuron (gets the data at the index specified by the counter)  
 
@@ -39,7 +39,7 @@ tb_neuralnetwork.sv X 1
 Design Sources:  
 
 neural_network.sv X 1  
-- layer.sv X 2  
+- input_layer.sv X 2  
   - neuron_inputlayer.sv x 10  
     - register.sv X 2   
     - multiplier.sv X 1  
