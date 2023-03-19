@@ -70,6 +70,7 @@ __Step 4:__ Use the code in File1.ipynb to convert the (Your Number)_prenormaliz
 
 __Step 5:__ Create a new vivado project, add these files as design sources:
 
+neural_network.sv  
 input_layer.sv  
 neuron_inputlayer.sv  
 register.sv  
