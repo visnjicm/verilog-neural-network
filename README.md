@@ -32,8 +32,23 @@ data_in:
 
 # __Hierarchy of Files:__  
 
+Simulation Sources: tb_neuralnetwork.sv X 1  
+
+Design Sources:  
+
+neural_network.sv X 1  
+- layer.sv X 2  
+  - neuron.sv x 10  
+    - register.sv X 2   
+    - multiplier.sv X 1  
+    - adder.sv X 1  
+    - ReLu.sv X 1  
+  - counter.sv X 1  
+
 
 # __Block diagram:__  
+
+See BlockDiagram.png.
 
 # __How to use this:__  
 
