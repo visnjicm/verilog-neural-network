@@ -1,0 +1,792 @@
+
+*** Running vivado
+    with args -log neural_network.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_network.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source neural_network.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 394.375 ; gain = 61.094
+Command: synth_design -top neural_network -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14120
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-9661] initial value of parameter 'BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'COUNTER_END' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'B_BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'END_COUNTER' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/counter.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'LAYER_NEURON_WIDTH' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'LAYER_COUNTER_END' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'LAYER_BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'B_BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'NEURON_WIDTH' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+WARNING: [Synth 8-9661] initial value of parameter 'NEURON_BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+WARNING: [Synth 8-9661] initial value of parameter 'COUNTER_END' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+WARNING: [Synth 8-9661] initial value of parameter 'B_BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+WARNING: [Synth 8-9661] initial value of parameter 'WIDTH' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+WARNING: [Synth 8-9661] initial value of parameter 'BITS' is omitted [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 833.227 ; gain = 414.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'neural_network' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neural_network.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'layer' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+	Parameter LAYER_NEURON_WIDTH bound to: 823 - type: integer 
+	Parameter LAYER_COUNTER_END bound to: 820 - type: integer 
+	Parameter LAYER_BITS bound to: 31 - type: integer 
+	Parameter B_BITS bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neuron' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+	Parameter NEURON_WIDTH bound to: 823 - type: integer 
+	Parameter NEURON_BITS bound to: 31 - type: integer 
+	Parameter COUNTER_END bound to: 820 - type: integer 
+	Parameter B_BITS bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'register' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+	Parameter WIDTH bound to: 823 - type: integer 
+	Parameter BITS bound to: 31 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'data' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'register' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:3]
+	Parameter BITS bound to: 31 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'rstn' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+WARNING: [Synth 8-567] referenced signal 'w' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'adder' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:3]
+	Parameter BITS bound to: 31 - type: integer 
+INFO: [Synth 8-251] counter_add:x sum_out:x [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:12]
+WARNING: [Synth 8-567] referenced signal 'counter' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+WARNING: [Synth 8-567] referenced signal 'value_out' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+WARNING: [Synth 8-567] referenced signal 'rstn' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ReLu' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+	Parameter BITS bound to: 31 - type: integer 
+	Parameter COUNTER_END bound to: 820 - type: integer 
+	Parameter B_BITS bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ReLu' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+WARNING: [Synth 8-689] width (40) of port connection 'neuron_out' does not match port width (56) of module 'ReLu' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'neuron' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/counter.sv:3]
+	Parameter END_COUNTER bound to: 820 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/counter.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'layer' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'layer__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+	Parameter LAYER_NEURON_WIDTH bound to: 49 - type: integer 
+	Parameter LAYER_COUNTER_END bound to: 40 - type: integer 
+	Parameter LAYER_BITS bound to: 39 - type: integer 
+	Parameter B_BITS bound to: 63 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+	Parameter NEURON_WIDTH bound to: 49 - type: integer 
+	Parameter NEURON_BITS bound to: 39 - type: integer 
+	Parameter COUNTER_END bound to: 40 - type: integer 
+	Parameter B_BITS bound to: 63 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+	Parameter WIDTH bound to: 49 - type: integer 
+	Parameter BITS bound to: 31 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'data' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized1' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+	Parameter WIDTH bound to: 49 - type: integer 
+	Parameter BITS bound to: 39 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'data' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized1' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/register.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'multiplier__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:3]
+	Parameter BITS bound to: 39 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'rstn' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+WARNING: [Synth 8-567] referenced signal 'w' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/multiplier.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'adder__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:3]
+	Parameter BITS bound to: 39 - type: integer 
+INFO: [Synth 8-251] counter_add:x sum_out:x [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:12]
+WARNING: [Synth 8-567] referenced signal 'counter' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+WARNING: [Synth 8-567] referenced signal 'value_out' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+WARNING: [Synth 8-567] referenced signal 'rstn' should be on the sensitivity list [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'adder__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/adder.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ReLu__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+	Parameter BITS bound to: 39 - type: integer 
+	Parameter COUNTER_END bound to: 40 - type: integer 
+	Parameter B_BITS bound to: 63 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ReLu__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/ReLu.sv:3]
+WARNING: [Synth 8-689] width (48) of port connection 'neuron_out' does not match port width (64) of module 'ReLu__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neuron_inputlayer.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'counter__parameterized0' [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/counter.sv:3]
+	Parameter END_COUNTER bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/counter.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'layer__parameterized0' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/input_layer.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'neural_network' (0#1) [D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.srcs/sources_1/new/neural_network.sv:4]
+WARNING: [Synth 8-7129] Port clk in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[31] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[30] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[29] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[28] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[27] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[26] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[25] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[24] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[23] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[22] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[21] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[20] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[19] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[18] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[17] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[16] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[15] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[14] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[13] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[12] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[11] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[10] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[9] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[8] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[7] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[6] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[5] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[4] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[3] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[2] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[1] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[0] in module adder__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[31] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[30] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[29] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[28] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[27] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[26] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[25] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[24] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[23] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[22] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[21] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[20] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[19] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[18] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[17] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[16] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[15] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[14] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[13] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[12] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[11] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[10] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[9] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[8] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[7] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[6] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[5] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[4] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[3] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[2] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[1] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[0] in module multiplier__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[31] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[30] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[29] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[28] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[27] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[26] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[25] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[24] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[23] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[22] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[21] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[20] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[19] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[18] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[17] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[16] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[15] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[14] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[13] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[12] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[11] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[10] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[9] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[8] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[7] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[6] in module register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[31] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[30] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[29] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[28] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[27] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[26] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[25] in module register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counter[24] in module register__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1069.172 ; gain = 649.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1069.172 ; gain = 649.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1069.172 ; gain = 649.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1124.270 ; gain = 705.055
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 20    
+	   2 Input   56 Bit       Adders := 20    
+	   2 Input   32 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 10    
+	               56 Bit    Registers := 10    
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	              32x40  Multipliers := 10    
+	              32x32  Multipliers := 10    
++---Muxes : 
+	   2 Input   56 Bit        Muxes := 10    
+	   2 Input   48 Bit        Muxes := 10    
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP MP1/mult_result0, operation Mode is: A*B.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: Generating DSP MP1/mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: Generating DSP MP1/mult_result0, operation Mode is: A*B.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: Generating DSP MP1/mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: operator MP1/mult_result0 is absorbed into DSP MP1/mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: Generating DSP mult_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1589.441 ; gain = 1170.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neural_network | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | (PCIN>>17)+A*B | 23     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:37 . Memory (MB): peak = 1589.441 ; gain = 1170.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:58 ; elapsed = 00:02:08 . Memory (MB): peak = 1727.504 ; gain = 1308.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:35 ; elapsed = 00:02:46 . Memory (MB): peak = 1801.086 ; gain = 1381.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:50 . Memory (MB): peak = 1801.086 ; gain = 1381.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:30 ; elapsed = 00:04:42 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:24:15 ; elapsed = 00:24:31 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:24:22 ; elapsed = 00:24:37 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:24:34 ; elapsed = 00:24:50 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neural_network | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier     | PCIN>>17+A*B | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+-------+
+|      |Cell    |Count  |
++------+--------+-------+
+|1     |BUFG    |      1|
+|2     |CARRY4  |    766|
+|3     |DSP48E1 |     80|
+|4     |LUT1    |     46|
+|5     |LUT2    |   2425|
+|6     |LUT3    |   2401|
+|7     |LUT4    |     28|
+|8     |LUT5    |     17|
+|9     |LUT6    | 145143|
+|10    |MUXF7   |  71680|
+|11    |MUXF8   |  35520|
+|12    |FDRE    |    994|
+|13    |FDSE    |      5|
+|14    |IBUF    | 306850|
+|15    |OBUF    |    480|
++------+--------+-------+
+
+Report Instance Areas: 
++------+---------------------------+------------------------------+-------+
+|      |Instance                   |Module                        |Cells  |
++------+---------------------------+------------------------------+-------+
+|1     |top                        |                              | 566436|
+|2     |  layer1                   |layer                         | 249452|
+|3     |    counter                |counter                       |  66492|
+|4     |    neuron1                |neuron                        |  18284|
+|5     |      AD1                  |adder_86                      |    199|
+|6     |      MP1                  |multiplier_87                 |     47|
+|7     |      RG_W                 |register_88                   |  12256|
+|8     |      RG_X                 |register_89                   |   5664|
+|9     |      activation_and_add_b |ReLu_90                       |    118|
+|10    |    neuron10               |neuron_36                     |  18284|
+|11    |      AD1                  |adder_81                      |    199|
+|12    |      MP1                  |multiplier_82                 |     47|
+|13    |      RG_W                 |register_83                   |  12256|
+|14    |      RG_X                 |register_84                   |   5664|
+|15    |      activation_and_add_b |ReLu_85                       |    118|
+|16    |    neuron2                |neuron_37                     |  18284|
+|17    |      AD1                  |adder_76                      |    199|
+|18    |      MP1                  |multiplier_77                 |     47|
+|19    |      RG_W                 |register_78                   |  12256|
+|20    |      RG_X                 |register_79                   |   5664|
+|21    |      activation_and_add_b |ReLu_80                       |    118|
+|22    |    neuron3                |neuron_38                     |  18284|
+|23    |      AD1                  |adder_71                      |    199|
+|24    |      MP1                  |multiplier_72                 |     47|
+|25    |      RG_W                 |register_73                   |  12256|
+|26    |      RG_X                 |register_74                   |   5664|
+|27    |      activation_and_add_b |ReLu_75                       |    118|
+|28    |    neuron4                |neuron_39                     |  18324|
+|29    |      AD1                  |adder_66                      |    199|
+|30    |      MP1                  |multiplier_67                 |     47|
+|31    |      RG_W                 |register_68                   |  12256|
+|32    |      RG_X                 |register_69                   |   5664|
+|33    |      activation_and_add_b |ReLu_70                       |    158|
+|34    |    neuron5                |neuron_40                     |  18284|
+|35    |      AD1                  |adder_61                      |    199|
+|36    |      MP1                  |multiplier_62                 |     47|
+|37    |      RG_W                 |register_63                   |  12256|
+|38    |      RG_X                 |register_64                   |   5664|
+|39    |      activation_and_add_b |ReLu_65                       |    118|
+|40    |    neuron6                |neuron_41                     |  18284|
+|41    |      AD1                  |adder_56                      |    199|
+|42    |      MP1                  |multiplier_57                 |     47|
+|43    |      RG_W                 |register_58                   |  12256|
+|44    |      RG_X                 |register_59                   |   5664|
+|45    |      activation_and_add_b |ReLu_60                       |    118|
+|46    |    neuron7                |neuron_42                     |  18284|
+|47    |      AD1                  |adder_51                      |    199|
+|48    |      MP1                  |multiplier_52                 |     47|
+|49    |      RG_W                 |register_53                   |  12256|
+|50    |      RG_X                 |register_54                   |   5664|
+|51    |      activation_and_add_b |ReLu_55                       |    118|
+|52    |    neuron8                |neuron_43                     |  18324|
+|53    |      AD1                  |adder_46                      |    199|
+|54    |      MP1                  |multiplier_47                 |     47|
+|55    |      RG_W                 |register_48                   |  12256|
+|56    |      RG_X                 |register_49                   |   5664|
+|57    |      activation_and_add_b |ReLu_50                       |    158|
+|58    |    neuron9                |neuron_44                     |  18324|
+|59    |      AD1                  |adder                         |    199|
+|60    |      MP1                  |multiplier                    |     47|
+|61    |      RG_W                 |register                      |  12256|
+|62    |      RG_X                 |register_45                   |   5664|
+|63    |      activation_and_add_b |ReLu                          |    158|
+|64    |  layer2                   |layer__parameterized0         |   9653|
+|65    |    counter                |counter__parameterized0       |   7543|
+|66    |    neuron1                |neuron__parameterized0        |    211|
+|67    |      AD1                  |adder__parameterized0_33      |    108|
+|68    |      MP1                  |multiplier__parameterized0_34 |     43|
+|69    |      activation_and_add_b |ReLu__parameterized0_35       |     60|
+|70    |    neuron10               |neuron__parameterized0_0      |    211|
+|71    |      AD1                  |adder__parameterized0_30      |    108|
+|72    |      MP1                  |multiplier__parameterized0_31 |     43|
+|73    |      activation_and_add_b |ReLu__parameterized0_32       |     60|
+|74    |    neuron2                |neuron__parameterized0_1      |    211|
+|75    |      AD1                  |adder__parameterized0_27      |    108|
+|76    |      MP1                  |multiplier__parameterized0_28 |     43|
+|77    |      activation_and_add_b |ReLu__parameterized0_29       |     60|
+|78    |    neuron3                |neuron__parameterized0_2      |    211|
+|79    |      AD1                  |adder__parameterized0_24      |    108|
+|80    |      MP1                  |multiplier__parameterized0_25 |     43|
+|81    |      activation_and_add_b |ReLu__parameterized0_26       |     60|
+|82    |    neuron4                |neuron__parameterized0_3      |    211|
+|83    |      AD1                  |adder__parameterized0_21      |    108|
+|84    |      MP1                  |multiplier__parameterized0_22 |     43|
+|85    |      activation_and_add_b |ReLu__parameterized0_23       |     60|
+|86    |    neuron5                |neuron__parameterized0_4      |    211|
+|87    |      AD1                  |adder__parameterized0_18      |    108|
+|88    |      MP1                  |multiplier__parameterized0_19 |     43|
+|89    |      activation_and_add_b |ReLu__parameterized0_20       |     60|
+|90    |    neuron6                |neuron__parameterized0_5      |    211|
+|91    |      AD1                  |adder__parameterized0_15      |    108|
+|92    |      MP1                  |multiplier__parameterized0_16 |     43|
+|93    |      activation_and_add_b |ReLu__parameterized0_17       |     60|
+|94    |    neuron7                |neuron__parameterized0_6      |    211|
+|95    |      AD1                  |adder__parameterized0_12      |    108|
+|96    |      MP1                  |multiplier__parameterized0_13 |     43|
+|97    |      activation_and_add_b |ReLu__parameterized0_14       |     60|
+|98    |    neuron8                |neuron__parameterized0_7      |    211|
+|99    |      AD1                  |adder__parameterized0_9       |    108|
+|100   |      MP1                  |multiplier__parameterized0_10 |     43|
+|101   |      activation_and_add_b |ReLu__parameterized0_11       |     60|
+|102   |    neuron9                |neuron__parameterized0_8      |    211|
+|103   |      AD1                  |adder__parameterized0         |    108|
+|104   |      MP1                  |multiplier__parameterized0    |     43|
+|105   |      activation_and_add_b |ReLu__parameterized0          |     60|
++------+---------------------------+------------------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:24:35 ; elapsed = 00:24:51 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 240 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:24:35 ; elapsed = 00:24:51 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+Synthesis Optimization Complete : Time (s): cpu = 00:24:35 ; elapsed = 00:24:51 . Memory (MB): peak = 1814.352 ; gain = 1395.137
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2778.555 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 108046 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 3626.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 980ba940
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:37:38 ; elapsed = 00:37:59 . Memory (MB): peak = 3626.070 ; gain = 3231.695
+INFO: [Common 17-1381] The checkpoint 'D:/NN_SYNTHESIS_ATTEMPTS/NN_SYNTHESIS_ATTEMPTS.runs/synth_1/neural_network.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:55 ; elapsed = 00:01:19 . Memory (MB): peak = 3626.070 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file neural_network_utilization_synth.rpt -pb neural_network_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3626.070 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 18 20:38:36 2023...
