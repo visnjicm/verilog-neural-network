@@ -32,7 +32,9 @@ data_in:
 
 # __Hierarchy of Files:__  
 
-Simulation Sources: tb_neuralnetwork.sv X 1  
+Simulation Sources:  
+
+tb_neuralnetwork.sv X 1  
 
 Design Sources:  
 
