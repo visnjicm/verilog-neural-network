@@ -64,9 +64,9 @@ __Step 2:__ Convert the image to a .csv file of pixel values in a 1D array, by u
 
 ![image](https://user-images.githubusercontent.com/126916558/226154252-f089e756-2f3c-4040-ad4d-10e4ba2af39d.png)
 
-__Step 3:__ Use the code in File2.ipynb to convert the <Your Number>_prenormalized.csv to <Your Number>.csv.
+__Step 3:__ Use the code in File2.ipynb to convert the (Your Number)_prenormalized.csv to (Your Number).csv.
 
-__Step 4:__ Use the code in File1.ipynb to convert the <Your Number>_prenormalized.csv to <Your Number>_fixed.csv and <Your Number>_hex.csv.
+__Step 4:__ Use the code in File1.ipynb to convert the (Your Number)_prenormalized.csv to (Your Number)_fixed.csv and (Your Number)_hex.csv.
 
 __Step 5:__ Create a new vivado project, add these files as design sources:
 
